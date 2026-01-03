@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-UI", "1-UI", "{4DCAA738-819D-452B-A63C-E5136F855936}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2-API", "2-API", "{EBAE272B-5C0D-44F8-84D6-D14BE60664B7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3-Domain", "3-Domain", "{EC408BC0-8C29-44DA-A73E-8CD009B844D5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4-Application", "4-Application", "{7D23203F-7D4C-4307-90A8-E9DC6E8B9B08}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5-Infrastructure", "5-Infrastructure", "{413648BD-5953-4664-A85A-990DB161FA72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Dreamlearner", "Domain.Dreamlearner\Domain.Dreamlearner.csproj", "{6295C9AB-6645-42F4-AA78-88A21F15BD33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.Dreamlearner", "Application.Dreamlearner\Application.Dreamlearner.csproj", "{AB6890DB-0EC7-4B85-88C7-262CE505B0CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Dreamlearner", "Infrastructure.Dreamlearner\Infrastructure.Dreamlearner.csproj", "{D720FD6C-B9E8-43D3-BE98-39CDD67D9D4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Dreamlearner", "Api.Dreamlearner\Api.Dreamlearner.csproj", "{632D6EFB-57CA-4E3E-9A2D-B543A5A5576A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6295C9AB-6645-42F4-AA78-88A21F15BD33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6295C9AB-6645-42F4-AA78-88A21F15BD33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6295C9AB-6645-42F4-AA78-88A21F15BD33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6295C9AB-6645-42F4-AA78-88A21F15BD33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB6890DB-0EC7-4B85-88C7-262CE505B0CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB6890DB-0EC7-4B85-88C7-262CE505B0CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB6890DB-0EC7-4B85-88C7-262CE505B0CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB6890DB-0EC7-4B85-88C7-262CE505B0CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D720FD6C-B9E8-43D3-BE98-39CDD67D9D4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D720FD6C-B9E8-43D3-BE98-39CDD67D9D4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D720FD6C-B9E8-43D3-BE98-39CDD67D9D4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D720FD6C-B9E8-43D3-BE98-39CDD67D9D4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{632D6EFB-57CA-4E3E-9A2D-B543A5A5576A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{632D6EFB-57CA-4E3E-9A2D-B543A5A5576A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{632D6EFB-57CA-4E3E-9A2D-B543A5A5576A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{632D6EFB-57CA-4E3E-9A2D-B543A5A5576A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6295C9AB-6645-42F4-AA78-88A21F15BD33} = {EC408BC0-8C29-44DA-A73E-8CD009B844D5}
+		{AB6890DB-0EC7-4B85-88C7-262CE505B0CA} = {7D23203F-7D4C-4307-90A8-E9DC6E8B9B08}
+		{D720FD6C-B9E8-43D3-BE98-39CDD67D9D4B} = {413648BD-5953-4664-A85A-990DB161FA72}
+		{632D6EFB-57CA-4E3E-9A2D-B543A5A5576A} = {EBAE272B-5C0D-44F8-84D6-D14BE60664B7}
+	EndGlobalSection
+EndGlobal
