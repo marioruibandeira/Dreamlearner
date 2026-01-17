@@ -1,4 +1,5 @@
-using Infrastructure.Dreamlearner;
+
+using Infrastructure.DreamLearner.Persistence;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
