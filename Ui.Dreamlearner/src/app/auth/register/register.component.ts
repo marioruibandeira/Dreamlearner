@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -12,7 +12,6 @@ import { AuthLayoutComponent } from '../layout/layout.component';
   selector: 'app-register',
   standalone: true,
   imports: [
-    CommonModule,
     FormsModule,
     MatFormFieldModule,
     MatInputModule,
@@ -20,7 +19,7 @@ import { AuthLayoutComponent } from '../layout/layout.component';
     MatProgressSpinnerModule,
     RouterLink,
     AuthLayoutComponent
-  ],
+],
   templateUrl: './register.component.html',
   styleUrl: './register.component.scss'
 })
