@@ -21,26 +21,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Dreamlearner
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Dreamlearner", "Api.Dreamlearner\Api.Dreamlearner.csproj", "{632D6EFB-57CA-4E3E-9A2D-B543A5A5576A}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Dreamlearner.Ui", "Dreamlearner.Ui\", "{D39F7C26-5BC5-4B54-B805-C635FC9FB6AD}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_53469"
-		Debug.AspNetCompiler.PhysicalPath = "Dreamlearner.Ui\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_53469\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_53469"
-		Release.AspNetCompiler.PhysicalPath = "Dreamlearner.Ui\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_53469\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "53469"
-		SlnRelativePath = "Dreamlearner.Ui\"
-	EndProjectSection
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "Ui.Dreamlearner", "Ui.Dreamlearner\Ui.Dreamlearner.esproj", "{14017C53-893C-42F7-9415-DFF250BDC834}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -64,10 +45,12 @@ Global
 		{632D6EFB-57CA-4E3E-9A2D-B543A5A5576A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{632D6EFB-57CA-4E3E-9A2D-B543A5A5576A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{632D6EFB-57CA-4E3E-9A2D-B543A5A5576A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D39F7C26-5BC5-4B54-B805-C635FC9FB6AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D39F7C26-5BC5-4B54-B805-C635FC9FB6AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D39F7C26-5BC5-4B54-B805-C635FC9FB6AD}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{D39F7C26-5BC5-4B54-B805-C635FC9FB6AD}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{14017C53-893C-42F7-9415-DFF250BDC834}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14017C53-893C-42F7-9415-DFF250BDC834}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14017C53-893C-42F7-9415-DFF250BDC834}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{14017C53-893C-42F7-9415-DFF250BDC834}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14017C53-893C-42F7-9415-DFF250BDC834}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14017C53-893C-42F7-9415-DFF250BDC834}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -77,6 +60,6 @@ Global
 		{AB6890DB-0EC7-4B85-88C7-262CE505B0CA} = {7D23203F-7D4C-4307-90A8-E9DC6E8B9B08}
 		{D720FD6C-B9E8-43D3-BE98-39CDD67D9D4B} = {413648BD-5953-4664-A85A-990DB161FA72}
 		{632D6EFB-57CA-4E3E-9A2D-B543A5A5576A} = {EBAE272B-5C0D-44F8-84D6-D14BE60664B7}
-		{D39F7C26-5BC5-4B54-B805-C635FC9FB6AD} = {4DCAA738-819D-452B-A63C-E5136F855936}
+		{14017C53-893C-42F7-9415-DFF250BDC834} = {4DCAA738-819D-452B-A63C-E5136F855936}
 	EndGlobalSection
 EndGlobal
