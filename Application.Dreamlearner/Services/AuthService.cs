@@ -18,16 +18,15 @@ namespace Application.Dreamlearner.Services
             _tokenService = tokenService;
         }
 
-        public async Task<IdentityResult> RegisterAsync(RegisterRequest request)
+        public async Task<AuthResponse?> RegisterAsync(RegisterRequest request)
         {
             var user = AppUser.Create(request.FullName, request.Email);
 
             var result = await _userManager.CreateAsync(user, request.Password);
+            if (!result.Succeeded) return null;
 
-            if(!result.Succeeded)
-                return result;
-
-            return result;
+            var token = _tokenService.GenerateToken(user);
+            return new AuthResponse(token, user.Email, user.FullName);
         }
 
         public async  Task<AuthResponse?> LoginAsync(string email, string password)

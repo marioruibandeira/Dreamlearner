@@ -1,38 +1,48 @@
 <app-auth-layout>
-  <span title>Registar - DreamLearner</span>
+  <span title>Registar</span>
 
   <form (ngSubmit)="onRegister()" #registerForm="ngForm">
+
     <mat-form-field appearance="outline" class="full-width">
       <mat-label>Nome Completo</mat-label>
-      <input matInput [(ngModel)]="fullName" name="fullName" required>
+      <input matInput name="fullName" [(ngModel)]="fullName" required />
     </mat-form-field>
 
     <mat-form-field appearance="outline" class="full-width">
       <mat-label>Email</mat-label>
-      <input matInput type="email" [(ngModel)]="email" name="email" required email>
+      <input matInput type="email" name="email" [(ngModel)]="email" required />
     </mat-form-field>
 
     <mat-form-field appearance="outline" class="full-width">
       <mat-label>Password</mat-label>
-      <input matInput type="password" [(ngModel)]="password" name="password" required minlength="6">
+      <input matInput type="password" name="password" [(ngModel)]="password" required minlength="6" />
     </mat-form-field>
 
     <mat-form-field appearance="outline" class="full-width">
       <mat-label>Confirmar Password</mat-label>
-      <input matInput type="password" [(ngModel)]="confirmPassword" name="confirmPassword" required>
+      <input matInput type="password" name="confirmPassword" [(ngModel)]="confirmPassword" required />
     </mat-form-field>
 
-    <button mat-raised-button color="accent" type="submit" class="full-width" [disabled]="loading">
-      @if (!loading) {
-        <span>Criar Conta</span>
-      }
-      @if (loading) {
+    <button
+      mat-raised-button
+      color="accent"
+      class="full-width"
+      type="submit"
+      [disabled]="loading">
+
+      <ng-container *ngIf="!loading; else loadingTpl">
+        Criar Conta
+      </ng-container>
+
+      <ng-template #loadingTpl>
         <mat-spinner diameter="20"></mat-spinner>
-      }
+      </ng-template>
+
     </button>
 
     <div class="link">
       Já tens conta? <a routerLink="/login">Entra aqui</a>
     </div>
+
   </form>
 </app-auth-layout>

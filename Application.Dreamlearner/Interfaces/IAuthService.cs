@@ -7,7 +7,7 @@ namespace Application.Dreamlearner.Interfaces
 {
     public interface IAuthService
     {
-        Task<IdentityResult> RegisterAsync(RegisterRequest request);
+        Task<AuthResponse?> RegisterAsync(RegisterRequest request);
         Task<AuthResponse?> LoginAsync(string email, string password);
     }
 }

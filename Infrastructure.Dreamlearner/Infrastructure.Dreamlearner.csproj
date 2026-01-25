@@ -33,6 +33,7 @@
     <!-- Mantém as tuas pastas organizadas -->
     <Folder Include="DataAccess\" />
     <Folder Include="AntiCorruption\" />
+    <Folder Include="Migrations\" />
     <Folder Include="Persistence\Identity\" />
     <Folder Include="Persistence\Configurations\" />
     <Folder Include="Persistence\StoredProcedures\" />
