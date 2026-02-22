@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable, tap } from 'rxjs';
 import { Router } from '@angular/router';
 import { environment } from '../../environments/environment';
+import { computed, signal } from '@angular/core';
 
 export interface AuthResponse {
   token: string;
@@ -24,9 +25,12 @@ export interface RegisterRequest {
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
+export class AuthService
+{
   private currentUserSubject = new BehaviorSubject<any>(null);
   public currentUser$ = this.currentUserSubject.asObservable();
+  private currentUserSignal = signal<any>(null);
+  public isLogged = computed(() => !!this.currentUserSignal());
 
   private readonly TOKEN_KEY = 'auth_token';
   private readonly USER_KEY = 'auth_user';
@@ -43,6 +47,9 @@ export class AuthService {
     const user = localStorage.getItem(this.USER_KEY);
     if (token && user) {
       this.currentUserSubject.next(JSON.parse(user));
+      const parsedUser = JSON.parse(user);
+      this.currentUserSubject.next(parsedUser);
+      this.currentUserSignal.set(parsedUser);
     }
   }
 
@@ -67,6 +74,8 @@ export class AuthService {
     localStorage.setItem(this.TOKEN_KEY, token);
     localStorage.setItem(this.USER_KEY, JSON.stringify(user));
     this.currentUserSubject.next(user);
+    this.currentUserSubject.next(user);
+    this.currentUserSignal.set(user);
   }
 
   // Logout
@@ -74,7 +83,8 @@ export class AuthService {
     localStorage.removeItem(this.TOKEN_KEY);
     localStorage.removeItem(this.USER_KEY);
     this.currentUserSubject.next(null);
-    this.router.navigate(['/login']);
+    this.currentUserSignal.set(null);
+    this.router.navigate(['/']);
   }
 
   // Getter para o token
