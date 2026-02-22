@@ -1,16 +1,34 @@
-import { TestBed } from '@angular/core/testing';
+import { Injectable, signal, PLATFORM_ID, inject } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
-import { AuthService } from './auth.service';
+@Injectable({
+  providedIn: 'root'
+})
+export class AuthService
+{
+  private platformId = inject(PLATFORM_ID);
 
-describe('AuthService', () => {
-  let service: AuthService;
+  // Signal reativo para o estado de login
+  isLoggedIn = signal<boolean>(this.checkToken());
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(AuthService);
-  });
+  private checkToken(): boolean
+  {
+    if (isPlatformBrowser(this.platformId)) {
+      return !!localStorage.getItem('token');
+    }
+    return false;
+  }
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
-});
+  // Atualiza o estado para "true" após login bem-sucedido
+  setLoggedIn(status: boolean) {
+    this.isLoggedIn.set(status);
+  }
+
+  logout() {
+    if (isPlatformBrowser(this.platformId)) {
+      localStorage.removeItem('token');
+    }
+    this.isLoggedIn.set(false);
+  }
+}
+

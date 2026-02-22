@@ -541,6 +541,33 @@ button.bg-secondary:focus {
   transition: .5s;
 }
 
+/*MENU DO USUARIO*/
+.menu-link {
+  color: #434343 !important;
+  text-decoration:none;
+}
+
+.menu-link:hover {
+  color: #d95327;
+}
+.perfil-img {
+  width: 100px; /* Define um tamanho fixo */
+  height: 100px; /* Mantém a proporção 1:1 */
+  object-fit: cover; /* Garante que a imagem não fique esticada */
+  border-radius: 50% !important;
+  border: 1px solid #ccc !important; /* Adicionei 'solid' para a borda aparecer */
+}
+.menufooter {
+  font-size: 12px;
+  text-decoration: none;
+  text-align:center;
+  margin-top:10px;
+}
+.menu-footer-link {
+  text-decoration: none;
+  color: #434343;
+}
+
 @media (max-width: 576px) {
   .navbar-expand-sm > .container,
   .navbar-expand-sm > .container-fluid, .navbar-expand-sm > .container-sm, .navbar-expand-sm > .container-md, .navbar-expand-sm > .container-lg, .navbar-expand-sm > .container-xl {
