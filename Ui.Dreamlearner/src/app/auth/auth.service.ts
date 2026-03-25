@@ -69,7 +69,6 @@ export class AuthService
     );
   }
 
-  // Guarda token e dados do utilizador
   private handleAuthentication(token: string, user: any) {
     localStorage.setItem(this.TOKEN_KEY, token);
     localStorage.setItem(this.USER_KEY, JSON.stringify(user));
@@ -78,7 +77,6 @@ export class AuthService
     this.currentUserSignal.set(user);
   }
 
-  // Logout
   logout(): void {
     localStorage.removeItem(this.TOKEN_KEY);
     localStorage.removeItem(this.USER_KEY);
@@ -87,35 +85,29 @@ export class AuthService
     this.router.navigate(['/']);
   }
 
-  // Getter para o token
   get token(): string | null {
     return localStorage.getItem(this.TOKEN_KEY);
   }
 
-  // Verifica se o utilizador está autenticado
   isLoggedIn(): boolean {
     const token = this.token;
     if (!token) {
       return false;
     }
 
-    // Opcional: verificar se o token ainda é válido (expiração)
     try {
       const payload = JSON.parse(atob(token.split('.')[1]));
       const exp = payload.exp * 1000;
       if (Date.now() >= exp) {
-        this.logout(); // token expirado → faz logout automático
+        this.logout(); // token expirado 
         return false;
       }
       return true;
     } catch {
-      // Token inválido → logout
       this.logout();
       return false;
     }
   }
-
-  // Obtém o utilizador atual (síncrono)
   get currentUserValue() {
     return this.currentUserSubject.value;
   }
